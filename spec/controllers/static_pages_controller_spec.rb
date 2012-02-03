@@ -23,9 +23,9 @@ describe StaticPagesController do
     end
   end
 
-  describe "GET 'contact--no-test-framework'" do
+  describe "GET 'contact'" do
     it "returns http success" do
-      get 'contact--no-test-framework'
+      get 'contact'
       response.should be_success
     end
   end
