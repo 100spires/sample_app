@@ -25,4 +25,9 @@ gem 'therubyracer', '~> 0.10.0beta1'
 group :test do
   gem 'rspec-rails', '2.8.1'
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
 end
