@@ -43,6 +43,17 @@ describe "User pages" do
 	        expect { click_button "Sign up" }.to change(User, :count).by(1)
 	      end
 	    end
+
+	    describe "error messages" do
+        before { click_button "Sign up" }
+
+        let(:error_text) { 'errors prohibited this user from being saved' }
+
+        it { should have_selector('title', text: 'Sign up') }
+        it { should have_content(error_text) }
+      end
+
+
   	end
 
 
